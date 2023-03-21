@@ -1,0 +1,28 @@
+<div class="container">
+
+	
+	<table>
+		<thead>
+			<tr>
+                <th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+				
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let hr of HRS">
+                <td>{{hr.id}}</td>
+				<td>{{hr.name}}</td>
+				<td>{{hr.email}}</td>
+				<td>{{hr.password}}</td>
+				
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
+
+

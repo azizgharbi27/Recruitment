@@ -1,0 +1,28 @@
+<div class="container">
+
+	
+	<table>
+		<thead>
+			<tr>
+                <th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+				<th>Team</th>
+				
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let m of Managers">
+                <td>{{m.id}}</td>
+				<td>{{m.name}}</td>
+				<td>{{m.email}}</td>
+				<td>{{m.password}}</td>
+				<td>{{m.team}}</td>
+				
+			</tr>
+			
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,63 @@
+<div class="body">
+	<div class="login-container">
+		<form >
+		  <h2>Update Managers </h2>
+          <div class="form-group">
+			<label >ID</label>
+			<input type="text" placeholder="" [(ngModel)]="id" [ngModelOptions]="{standalone:true}">
+			
+		  </div>
+		  <div class="form-group">
+			<label >Name</label>
+			<input type="text" placeholder="" [(ngModel)]="name" [ngModelOptions]="{standalone:true}">
+			
+		  </div>
+		  <div class="form-group">
+			<label >Email</label>
+			<input type="text" placeholder="" [(ngModel)]="email" [ngModelOptions]="{standalone:true}">
+			
+		  </div>
+		  <div class="form-group">
+			<label >Password</label>
+			<input type="text" placeholder="" [(ngModel)]="password" [ngModelOptions]="{standalone:true}">
+			
+		  </div>
+		  <div class="form-group">
+			<label >Team</label>
+			<input type="text"  placeholder="" [(ngModel)]="team" [ngModelOptions]="{standalone:true}">
+			
+		  </div>
+		  <button type="submit" (click)="onSubmit()">Update</button>
+		</form>
+	  </div>
+
+<div class="container">
+
+	
+	<table>
+		<thead>
+			<tr>
+                <th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+				<th>Team</th>
+				
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let m of Managers">
+                <td>{{m.id}}</td>
+				<td>{{m.name}}</td>
+				<td>{{m.email}}</td>
+				<td>{{m.password}}</td>
+				<td>{{m.team}}</td>
+				
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
+
+</div>

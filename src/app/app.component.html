@@ -1,0 +1,15 @@
+<div id="Home">
+    <button class="button-home"  (click)="home()">_</button>
+</div>
+
+<div id="state" style="display:none;">
+    <button class="button-logout" (click)="onClick()">Log out from Admin</button>
+</div>
+<div id="state1" style="display:none;">
+    <button class="button-logout" (click)="onClick1()">Log out from HR</button>
+</div>
+<div id="state2" style="display:none;">
+    <button class="button-logout" (click)="onClick2()">Log out from Managers</button>
+</div>
+
+<router-outlet></router-outlet>

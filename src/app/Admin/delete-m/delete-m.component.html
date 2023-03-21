@@ -1,0 +1,45 @@
+<div class="body">
+	<div class="login-container">
+		<form >
+		  <h2>Delete Manager </h2>
+		  <div class="form-group">
+			<label >ID</label>
+			<input type="text" placeholder="" [(ngModel)]="id" [ngModelOptions]="{standalone:true}">
+			
+		  </div>
+		  
+		  <button type="submit" (click)="onSubmit()">Delete</button>
+		</form>
+	  </div>
+
+<div class="container">
+
+	
+	<table>
+		<thead>
+			<tr>
+                <th>ID</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+				<th>Team</th>
+				
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let m of Managers">
+                <td>{{m.id}}</td>
+				<td>{{m.name}}</td>
+				<td>{{m.email}}</td>
+				<td>{{m.password}}</td>
+				<td>{{m.team}}</td>
+				
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
+
+</div>
+
