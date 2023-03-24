@@ -5,5 +5,6 @@ export class Candidate{
  phone!:string;
  skills!:string;
  field!:string;
+ cv!:string;
 
 }

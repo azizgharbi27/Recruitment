@@ -16,6 +16,7 @@ import { LoginHRComponent } from './login-hr/login-hr.component';
 import { LoginManComponent } from './login-man/login-man.component';
 import { HomeHRComponent } from './home-hr/home-hr.component';
 import { HomeManComponent } from './home-man/home-man.component';
+import { CVComponent } from './cv/cv.component';
 
 
 
@@ -35,7 +36,8 @@ const routes: Routes = [
   { path: 'LoginHRC', component:LoginHRComponent},
   { path: 'LoginManC', component:LoginManComponent},
   { path: 'HomeHRC', component:HomeHRComponent},
-  { path: 'HomeManC', component:HomeManComponent}
+  { path: 'HomeManC', component:HomeManComponent},
+  { path: 'assets/:cv', component:CVComponent}
   
 ];
 

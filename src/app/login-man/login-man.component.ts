@@ -26,9 +26,10 @@ export class LoginManComponent {
       let k=0;
          for(let i=0;i<this.managers.length;i++){
             if((this.managers[i].name==this.user)&&(this.managers[i].password==this.password)){
-              document.getElementById("state2")!.style.display="block";
-              this.router.navigate(['/HomeManC']);
+              
               k++;
+              this.router.navigate(['/HomeManC']);
+              document.getElementById("state2")!.style.display="block";
             }
          }
          if(k==0){

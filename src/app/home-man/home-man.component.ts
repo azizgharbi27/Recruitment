@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import GcPdfViewer from '@grapecity/gcpdfviewer';
 import { Candidate } from '../Candidate';
 import { CandidatesService } from '../candidates.service';
+import { CVComponent } from '../cv/cv.component';
 
 @Component({
   selector: 'app-home-man',
@@ -10,14 +13,18 @@ import { CandidatesService } from '../candidates.service';
 export class HomeManComponent implements OnInit {
 
   Candidates:Candidate[];
-  constructor(private candidateService:CandidatesService){
+  constructor(private candidateService:CandidatesService, private router:Router,private cvc:CVComponent){
 
   }
 
   ngOnInit(): void {
     this.candidateService.getAll().subscribe(data =>{this.Candidates=data});
     
+    
   }
 
-
+getCV(cv:string){
+  this.router.navigate(['/assets',cv]);
+  
+}
 }

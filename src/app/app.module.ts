@@ -21,6 +21,7 @@ import { LoginHRComponent } from './login-hr/login-hr.component';
 import { LoginManComponent } from './login-man/login-man.component';
 import { HomeHRComponent } from './home-hr/home-hr.component';
 import { HomeManComponent } from './home-man/home-man.component';
+import { CVComponent } from './cv/cv.component';
 
 
 
@@ -42,6 +43,7 @@ import { HomeManComponent } from './home-man/home-man.component';
     LoginHRComponent,
     LoginManComponent,
     HomeHRComponent,
+    CVComponent,
     HomeManComponent
     
     
@@ -50,7 +52,7 @@ import { HomeManComponent } from './home-man/home-man.component';
     BrowserModule,
     AppRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule
   ],
-  providers: [],
+  providers: [CVComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

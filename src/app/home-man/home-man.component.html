@@ -5,7 +5,6 @@
 		<thead>
 			<tr>
                 <th>ID</th>
-				<th>Name</th>
 				<th>Email</th>
 				<th>Phone</th>
                 <th>Skills</th>
@@ -19,16 +18,17 @@
 		<tbody>
 			<tr *ngFor="let c of Candidates">
                 <td>{{c.id}}</td>
-				<td>{{c.fullname}}</td>
 				<td>{{c.email}}</td>
 				<td>{{c.phone}}</td>
                 <td>{{c.skills}}</td>
 				<td>{{c.field}}</td>
 				<td id="a">
-                    <button>Recruit</button> <button>Get Details</button>
+                    <button >Recruit</button> <button (click)="getCV(c.cv)">Get Details</button>
                 </td>
 			</tr>
 			
 		</tbody>
 	</table>
+	<div id="viewer">
+	</div>
 </div>
