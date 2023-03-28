@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Candidate } from './Candidate';
@@ -9,11 +9,17 @@ import { Candidate } from './Candidate';
 export class CandidatesService {
 
   url:String="";
+
   constructor (private HttpClient: HttpClient) {
-    this.url="http://localhost:8080/candidates";
+    this.url="http://localhost:8080/Candidate";
+    
    }
-   
+   public delete(id:number){
+    
+    return this.HttpClient.delete(this.url+"/"+id);
+   }
    public getAll():Observable<Candidate[]>{
     return this.HttpClient.get<Candidate[]>(this.url+"");
    }
+   
 }
