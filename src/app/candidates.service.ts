@@ -21,5 +21,7 @@ export class CandidatesService {
    public getAll():Observable<Candidate[]>{
     return this.HttpClient.get<Candidate[]>(this.url+"");
    }
-   
+   public add(c:Candidate){
+    return this.HttpClient.post(this.url+"",c);
+   }
 }

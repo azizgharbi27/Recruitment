@@ -22,6 +22,9 @@ import { LoginManComponent } from './login-man/login-man.component';
 import { HomeHRComponent } from './home-hr/home-hr.component';
 import { HomeManComponent } from './home-man/home-man.component';
 import { CVComponent } from './cv/cv.component';
+import { CandidatesListComponent } from './candidates-list/candidates-list.component';
+import { CandidatesRejectedComponent } from './candidates-rejected/candidates-rejected.component';
+import { CandidatesAcceptedComponent } from './candidates-accepted/candidates-accepted.component';
 
 
 
@@ -44,7 +47,10 @@ import { CVComponent } from './cv/cv.component';
     LoginManComponent,
     HomeHRComponent,
     CVComponent,
-    HomeManComponent
+    HomeManComponent,
+    CandidatesListComponent,
+    CandidatesRejectedComponent,
+    CandidatesAcceptedComponent
     
     
   ],

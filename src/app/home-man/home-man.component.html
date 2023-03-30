@@ -1,36 +1,14 @@
-<div class="container">
-
+<div class="all">
 	
-	<table>
-		<thead>
-			<tr>
-                <th>ID</th>
-				<th>Email</th>
-				<th>Phone</th>
-                <th>Skills</th>
-                <th>Field</th>
-				<th>Action</th>
-                
-				
-				
-			</tr>
-		</thead>
-		<tbody>
-			<tr *ngFor="let c of Candidates"  >
-			
-                <td>{{c.id}}</td>
-				<td>{{c.email}}</td>
-				<td>{{c.phone}}</td>
-                <td>{{c.skills}}</td>
-				<td>{{c.field}}</td>
-				<td id="a">
-                    <button (click)="recruit(c)">Recruit</button> <button (click)="getCV(c.cv)">Get Details</button>
-                </td>
-			
-			</tr>
-			
-		</tbody>
-	</table>
-	<div id="viewer">
+	<div class="left" routerLink="/CA">
+	  <div class="text">Candidates Accepted</div>
+	</div>
+	<div class="center" routerLink="/CL">
+	  <div class="explainer" ><span>Candidates</span></div>
+	  <div class="text">Candidates List</div>
+	</div>
+	<div class="right" routerLink="/CR">
+	  <div class="text">Candidates Rejected</div>
 	</div>
 </div>
+

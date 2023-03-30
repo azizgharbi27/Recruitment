@@ -17,6 +17,9 @@ import { LoginManComponent } from './login-man/login-man.component';
 import { HomeHRComponent } from './home-hr/home-hr.component';
 import { HomeManComponent } from './home-man/home-man.component';
 import { CVComponent } from './cv/cv.component';
+import { CandidatesListComponent } from './candidates-list/candidates-list.component';
+import { CandidatesAcceptedComponent } from './candidates-accepted/candidates-accepted.component';
+import { CandidatesRejectedComponent } from './candidates-rejected/candidates-rejected.component';
 
 
 
@@ -37,7 +40,10 @@ const routes: Routes = [
   { path: 'LoginManC', component:LoginManComponent},
   { path: 'HomeHRC', component:HomeHRComponent},
   { path: 'HomeManC', component:HomeManComponent},
-  { path: 'assets/:cv', component:CVComponent}
+  { path: 'assets/:cv', component:CVComponent},
+  { path: 'CL', component:CandidatesListComponent},
+  { path: 'CR', component:CandidatesRejectedComponent},
+  { path: 'CA', component:CandidatesAcceptedComponent}
   
 ];
 
