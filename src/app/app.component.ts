@@ -14,8 +14,12 @@ import { PageScrollService } from 'ngx-page-scroll-core';
 })
 export class AppComponent  {
   title = 'Recrutement';
-  UserLogged:boolean;
-  constructor(private router:Router){}
+  UserLogged:string=window.localStorage.getItem("user")!;
+
+  constructor(private router:Router){
+  
+  
+  }
   
   public onClick(){
     document.getElementById("state")!.style.display="none";
@@ -27,12 +31,13 @@ export class AppComponent  {
   }
   public onClick2(){
     document.getElementById("state2")!.style.display="none";
+    
         this.router.navigate(['/']);
   }
   public home(){
     this.router.navigate(['/']);
+    
   }
-  
 
   
 

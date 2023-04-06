@@ -26,6 +26,7 @@ import { CandidatesRejectedComponent } from './candidates-rejected/candidates-re
 const routes: Routes = [
   
   { path: '', component: HomeComponent },
+  { path: 'appC', component: AppComponent },
   { path: 'AdLogC', component: AdLogComponent },
   { path: 'AdHomeC', component: AdHomeComponent },
   { path: 'AddManC', component:AddManagerComponent },

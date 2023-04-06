@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AppComponent } from './app.component';
 import { CandidateW } from './CandidateW';
 
 @Injectable({
@@ -14,6 +15,9 @@ export class CandidateWService {
    }
    
    public getAll():Observable<CandidateW[]>{
+    return this.HttpClient.get<CandidateW[]>(this.url+"");
+   }
+   public get():Observable<CandidateW[]>{
     return this.HttpClient.get<CandidateW[]>(this.url+"");
    }
 

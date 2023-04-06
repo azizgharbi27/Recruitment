@@ -15,14 +15,14 @@ export class AdLogComponent {
 
   user:any;
   password:any;
-  
+  res:string;
   constructor(private authS:AuthService ,private router:Router)
     {}
         
 
    
     onSubmit(){
-      if(document.getElementById("state1")!.style.display=="block" || document.getElementById("state2")!.style.display=="block"){
+       if(document.getElementById("state1")!.style.display=="block" || document.getElementById("state2")!.style.display=="block"){
         alert("PLEASE LOG OUT FIRST");
       }
 

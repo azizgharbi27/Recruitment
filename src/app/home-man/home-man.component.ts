@@ -25,18 +25,5 @@ export class HomeManComponent implements OnInit {
     
   }
 
-getCV(cv:string){
-  this.router.navigate(['/assets',cv]);
-  
-}
-recruit(c:Candidate){
-  
-  this.candidateWService.add(c).subscribe();
-  console.log(c.id);
-  this.candidateService.delete(c.id).subscribe();
-  console.log(c.id);
-  window.location.reload();
-  
-  
-}
+
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 import { Manager } from '../Manager';
 import { ManagersService } from '../managers.service';
 
@@ -13,7 +14,7 @@ export class LoginManComponent {
   password:string;
   managers:Manager[];
   l:number;
-  constructor(private mService:ManagersService,private router:Router){
+  constructor(private mService:ManagersService,private router:Router,private appC:AppComponent){
     this.mService.getAll().subscribe(data=>{this.managers=data});
   }
   
@@ -28,8 +29,11 @@ export class LoginManComponent {
             if((this.managers[i].name==this.user)&&(this.managers[i].password==this.password)){
               
               k++;
-              this.router.navigate(['/HomeManC']);
-              document.getElementById("state2")!.style.display="block";
+        
+              window.localStorage.setItem("user",this.user);
+              console.log(window.localStorage.getItem("user"));
+              window.location.assign('/HomeManC');
+             
             }
          }
          if(k==0){

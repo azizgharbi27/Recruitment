@@ -22,6 +22,7 @@ export class CandidatesRService {
     return this.HttpClient.get<CandidateR[]>(this.url+"");
     
    }
+   
    public add(cr:CandidateR){
     return this.HttpClient.post(this.url+"",cr);
    }
