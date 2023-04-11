@@ -9,7 +9,7 @@
 				<th>Phone</th>
                 <th>Skills</th>
                 <th>Field</th>
-				<th>acceptedBy</th>
+				<th>status</th>
 				
                 
 				
@@ -17,14 +17,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr *ngFor="let c of CandidatesW"  >
+			<tr *ngFor="let c of Candidates"  >
 			
                 <td>{{c.id}}</td>
 				<td>{{c.email}}</td>
 				<td>{{c.phone}}</td>
                 <td>{{c.skills}}</td>
 				<td>{{c.field}}</td>
-				<td>{{c.acceptedBy}}</td>
+				<td>{{c.status}}</td>
 				
 			
 			</tr>

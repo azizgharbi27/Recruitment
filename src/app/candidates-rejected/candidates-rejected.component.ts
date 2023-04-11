@@ -2,9 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
-import { CandidateR } from '../CandidateR';
-import { CandidatesRService } from '../candidates-r.service';
 import { CandidatesService } from '../candidates.service';
+import { Candidate } from '../Candidate';
 
 @Component({
   selector: 'app-candidates-rejected',
@@ -13,32 +12,22 @@ import { CandidatesService } from '../candidates.service';
 })
 export class CandidatesRejectedComponent implements OnInit {
   i:number;
-  CandidatesR:CandidateR[];
-  cr:CandidateR;
-  constructor(private candidateRService:CandidatesRService,private candidateService:CandidatesService, private router:Router,
+  Candidates:Candidate[];
+  
+  constructor(private candidateService:CandidatesService, private router:Router,
     private appC:AppComponent  ,private http:HttpClient){
-this.cr=new CandidateR();
+
   }
 
   ngOnInit(): void {
-    this.http.get<CandidateR[]>("http://localhost:8080/CandidateR/"+this.appC.UserLogged)
-    .subscribe(data =>{this.CandidatesR=data});
+    this.candidateService.getAll("rejected",window.localStorage.getItem("user")!).subscribe(data =>{this.Candidates=data});
     document.getElementById("state2")!.style.display="block";
     
   }
 
-  restore(c:CandidateR){
-    this.cr.cv=c.cv;
-  this.cr.email=c.email;
-  this.cr.field=c.field;
-  this.cr.fullname=c.fullname;
-  this.cr.id=c.id;
-  this.cr.phone=c.phone;
-  this.cr.skills=c.skills;
-  this.cr.rejectedBy=this.appC.UserLogged;
-
-    this.candidateService.add(c).subscribe();
-    this.candidateRService.delete(this.cr.id).subscribe();
-  window.location.reload();
+  restore(c:Candidate){
+    
+    this.candidateService.restoreC(c).subscribe();
+      window.location.reload();
   }
 }
