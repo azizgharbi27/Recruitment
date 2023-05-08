@@ -53,17 +53,21 @@
 	transform: translateY(30px);
 	opacity: 0;
 	transition: all .3s ease;
-	bottom: 0;
+	bottom: -10px;
 	left: 5px;
 	position: absolute;
 	will-change: transform;
 	color: #fefafa;
 	text-shadow: 0 0 5px rgba(100, 100, 255, .6)
   }
- 
+  .lefter {
+	transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+	background-image: url(https://img.icons8.com/ios-filled/100/null/decision.png);
+  }
   .left {
 	transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
-	background-image: url(https://img.icons8.com/ios-filled/100/null/approve.png);
+	background-image: url(https://img.icons8.com/ios-filled/100/null/meeting-time.png);
+	
   }
   .center {
 	opacity: 1;
@@ -73,7 +77,11 @@
 	transform: translateX(30px) translateZ(-25px) rotateY(5deg);
 	background-image: url(https://img.icons8.com/ios-filled/100/null/disapprove.png);
   }
-  
+  .righter {
+	transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+	background-image: url(https://img.icons8.com/ios-filled/100/null/approve.png);
+	}
+
   .explainer {
 	font-weight: 300;
 	font-size: 2rem;

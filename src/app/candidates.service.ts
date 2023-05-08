@@ -27,12 +27,19 @@ export class CandidatesService {
    public add(c:Candidate){
     return this.HttpClient.post(this.url+"",c);
    } 
+
    
    public putC(c:Candidate,status:string){
     return this.HttpClient.put(this.url+"/"+status+"/"+window.localStorage.getItem("user"),c);
    }
    public restoreC(c:Candidate){
     return this.HttpClient.put(this.url+"/restore",c);
+   }
+   public state(c:Candidate,status:string){
+    return this.HttpClient.put(this.url+"/"+status,c);
+   }
+   public giveFeedback(c:Candidate,feedback:string){
+    return this.HttpClient.put(this.url+"/feedback/"+feedback,c);
    }
 
 }

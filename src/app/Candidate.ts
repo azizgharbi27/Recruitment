@@ -8,5 +8,6 @@ export class Candidate{
  cv!:string;
  status!:string;
  manager!:string;
+ feedback!:string;
 
 }

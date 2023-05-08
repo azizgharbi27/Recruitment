@@ -1,0 +1,36 @@
+<div class="container">
+
+	
+	<table>
+		<thead>
+			<tr>
+                <th>ID</th>
+				<th>Email</th>
+				<th>Phone</th>
+                <th>Skills</th>
+                <th>Field</th>
+				<th>status</th>
+				
+                
+				
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let c of Candidates"  >
+			
+                <td>{{c.id}}</td>
+				<td>{{c.email}}</td>
+				<td>{{c.phone}}</td>
+                <td>{{c.skills}}</td>
+				<td>{{c.field}}</td>
+				<td>{{c.status}}</td>
+				
+			
+			</tr>
+			
+		</tbody>
+	</table>
+	<div id="viewer">
+	</div>
+</div>

@@ -20,6 +20,10 @@ import { CVComponent } from './cv/cv.component';
 import { CandidatesListComponent } from './candidates-list/candidates-list.component';
 import { CandidatesAcceptedComponent } from './candidates-accepted/candidates-accepted.component';
 import { CandidatesRejectedComponent } from './candidates-rejected/candidates-rejected.component';
+import { CandidatesRecruitedComponent } from './candidates-recruited/candidates-recruited.component';
+import { CandidatesInterviewedComponent } from './candidates-interviewed/candidates-interviewed.component';
+import { HRBookingComponent } from './hrbooking/hrbooking.component';
+import { HrBookingFinalInterviewComponent } from './hr-booking-final-interview/hr-booking-final-interview.component';
 
 
 
@@ -44,7 +48,11 @@ const routes: Routes = [
   { path: 'assets/:cv', component:CVComponent},
   { path: 'CL', component:CandidatesListComponent},
   { path: 'CR', component:CandidatesRejectedComponent},
-  { path: 'CA', component:CandidatesAcceptedComponent}
+  { path: 'CA', component:CandidatesAcceptedComponent},
+  { path: 'CRec', component:CandidatesRecruitedComponent},
+  { path: 'CI', component:CandidatesInterviewedComponent},
+  { path: 'HRB', component:HRBookingComponent},
+  { path: 'HRFB', component:HrBookingFinalInterviewComponent}
   
 ];
 

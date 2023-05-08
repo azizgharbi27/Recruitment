@@ -11,7 +11,7 @@ export class AdHomeComponent {
   
   
   constructor(){
-
+    document.getElementById("state")!.style.display="block";
   }
  
 }

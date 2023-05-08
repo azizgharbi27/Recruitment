@@ -1,18 +1,3 @@
-<div class="filter">
-	<div class="f">
-		<label for="" id="a">Skill:</label>
-	<input type="text" name="" id="a" [(ngModel)]="skill">
-	<label for="" id="a">Field:</label>
-	<select name="" id="a" [(ngModel)]="field" >
-		<option selected >All</option>
-		<option  >Business</option>
-		<option >IT</option>
-		
-	</select>
-	
-	<button id="search" (click)="search()">Search</button>
-</div>
-</div>
 <div class="container">
 
 	
@@ -24,7 +9,8 @@
 				<th>Phone</th>
                 <th>Skills</th>
                 <th>Field</th>
-				<th>Action</th>
+				<th>status</th>
+				<th>action</th>
                 
 				
 				
@@ -38,10 +24,11 @@
 				<td>{{c.phone}}</td>
                 <td>{{c.skills}}</td>
 				<td>{{c.field}}</td>
+				<td>{{c.status}}</td>
 				<td id="a">
-                    <button (click)="recruit(c)">Ask for interview</button> 
+                    <button (click)="recruit(c)">Recruit</button> 
                     <button (click)="reject(c)">Reject</button>
-                    <button (click)="getCV(c.cv)">Get Details</button>
+                    <button (click)="openDialog(c)">Give Feedback</button>
                 </td>
 			
 			</tr>
@@ -51,3 +38,4 @@
 	<div id="viewer">
 	</div>
 </div>
+

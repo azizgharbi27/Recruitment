@@ -1,5 +1,6 @@
 export class Email{
-    email!:string;
+    emailc!:string;
+        emailm!:string;
     name!:string;
     message!:string;
 }

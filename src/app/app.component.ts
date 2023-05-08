@@ -36,6 +36,9 @@ export class AppComponent  {
   }
   public home(){
     this.router.navigate(['/']);
+    //document.getElementById("state")!.style.display="none";
+    //document.getElementById("state1")!.style.display="none";
+    //document.getElementById("state2")!.style.display="none";
     
   }
 

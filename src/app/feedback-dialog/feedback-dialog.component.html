@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Give feedback on this candidate</h1>
+<div mat-dialog-content>
+<p></p>
+<mat-form-field id="text">
+	<textarea
+    [(ngModel)]="data.feedback"
+        matInput
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="3">
+    </textarea> 
+    
+</mat-form-field>
+</div>
+<div mat-dialog-actions>
+<button mat-button (click)="onCancel()">No Thanks</button>
+<button mat-button [mat-dialog-close]="data.feedback"
+			cdkFocusInitial>Ok</button>
+</div>

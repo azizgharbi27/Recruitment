@@ -25,6 +25,19 @@ import { CVComponent } from './cv/cv.component';
 import { CandidatesListComponent } from './candidates-list/candidates-list.component';
 import { CandidatesRejectedComponent } from './candidates-rejected/candidates-rejected.component';
 import { CandidatesAcceptedComponent } from './candidates-accepted/candidates-accepted.component';
+import { CandidatesRecruitedComponent } from './candidates-recruited/candidates-recruited.component';
+import { CandidatesInterviewedComponent } from './candidates-interviewed/candidates-interviewed.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+  import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+  import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatCommonModule} from '@angular/material/core';
+import { FeedbackDialogComponent } from './feedback-dialog/feedback-dialog.component';
+import { HRBookingComponent } from './hrbooking/hrbooking.component';
+import { InterviewComponent } from './interview/interview.component';
+import { HrBookingFinalInterviewComponent } from './hr-booking-final-interview/hr-booking-final-interview.component';
+
 
 
 
@@ -50,15 +63,30 @@ import { CandidatesAcceptedComponent } from './candidates-accepted/candidates-ac
     HomeManComponent,
     CandidatesListComponent,
     CandidatesRejectedComponent,
-    CandidatesAcceptedComponent
+    CandidatesAcceptedComponent,
+    CandidatesRecruitedComponent,
+    CandidatesInterviewedComponent,
+    FeedbackDialogComponent,
+    HRBookingComponent,
+    InterviewComponent,
+    HrBookingFinalInterviewComponent
+    
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule
+    AppRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule, BrowserAnimationsModule,
+    MatButtonModule,
+	MatCommonModule,
+	MatDialogModule,
+	MatFormFieldModule,
+	MatInputModule,
   ],
-  providers: [CVComponent],
+  providers: [CVComponent,{
+    provide: MatDialogRef,
+    useValue: {}
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

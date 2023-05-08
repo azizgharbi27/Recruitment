@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Choose a date and time for the interview:</h1>
+    <input matInput type="datetime-local" placeholder="start date" id="date" [(ngModel)]="date">
+    <div mat-dialog-actions>
+        <button mat-button (click)="onCancel()">No Thanks</button>
+        <button mat-button [mat-dialog-close]="data.feedback"
+                    cdkFocusInitial >Ok</button>
+        </div>
+        

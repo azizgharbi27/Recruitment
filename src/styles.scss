@@ -8,8 +8,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(ellipse at bottom, #213144, #213144);
+    background: radial-gradient(ellipse at bottom, #f1eaff, #f1eaff);
     font-weight: 300;
     color: aliceblue;
     
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
