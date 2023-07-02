@@ -30,7 +30,7 @@ export class HRBookingComponent {
   }
 
   ngOnInit(): void {
-    this.candidateService.get("accepted").subscribe(data =>{this.Candidates=data});
+    this.candidateService.get("waiting for Manager interview").subscribe(data =>{this.Candidates=data});
     
     this.managersService.getAll().subscribe(data =>{this.managers=data});
     document.getElementById("state1")!.style.display="block";
@@ -62,7 +62,7 @@ openDialog(c:Candidate): void {
         this.mail.emailm=this.managers[i].email;
       }
   }
-    this.mail.message=("welcome "+c.fullname+" we have planned an interview for you on Friday with Mr."+c.manager);
+    this.mail.message=("welcome "+c.fullname+" we have planned an interview for you with Mr."+c.manager);
     this.mail.emailc=c.email;
     this.mail.name="interview";
     console.log(this.mail);

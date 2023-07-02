@@ -6,11 +6,12 @@
 }
 
 .screen {		
-	background: linear-gradient(90deg, #2816ac, #65b5f7);		
+	background: linear-gradient(90deg, #5716ac, #f765f2);		
 	position: relative;	
 	height: 600px;
 	width: 360px;	
-	box-shadow: 0px 0px 24px #0079c0;
+	box-shadow: 0px 0px 44px #b92ff4ca;
+	border-radius: 10px;
 }
 
 .screen__content {
@@ -155,4 +156,6 @@
 
 h3{
     color: #4C489D;
+	font-size: 0px;
+	font-weight: 700;
 }

@@ -20,7 +20,7 @@ export class CandidatesRejectedComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.candidateService.getAll("rejected",window.localStorage.getItem("user")!).subscribe(data =>{this.Candidates=data});
+    this.candidateService.get("rejected").subscribe(data =>{this.Candidates=data});
     document.getElementById("state2")!.style.display="block";
     
   }

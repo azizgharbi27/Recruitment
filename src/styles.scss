@@ -4,11 +4,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    overflow: auto;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(ellipse at bottom, #f1eaff, #f1eaff);
+    background:  #f4efff;
     font-weight: 300;
     color: aliceblue;
     

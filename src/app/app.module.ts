@@ -37,6 +37,14 @@ import { FeedbackDialogComponent } from './feedback-dialog/feedback-dialog.compo
 import { HRBookingComponent } from './hrbooking/hrbooking.component';
 import { InterviewComponent } from './interview/interview.component';
 import { HrBookingFinalInterviewComponent } from './hr-booking-final-interview/hr-booking-final-interview.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { NgChartsModule } from 'ng2-charts';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatTable,MatTableDataSource, MatTableModule, _MatTableDataSource } from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenu, MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
+
+
 
 
 
@@ -69,7 +77,8 @@ import { HrBookingFinalInterviewComponent } from './hr-booking-final-interview/h
     FeedbackDialogComponent,
     HRBookingComponent,
     InterviewComponent,
-    HrBookingFinalInterviewComponent
+    HrBookingFinalInterviewComponent,
+    StatisticsComponent
     
     
     
@@ -82,6 +91,15 @@ import { HrBookingFinalInterviewComponent } from './hr-booking-final-interview/h
 	MatDialogModule,
 	MatFormFieldModule,
 	MatInputModule,
+  NgChartsModule,
+  MatPaginatorModule,
+  MatTableModule,
+  MatMenuModule,
+  MatIconModule,
+
+  
+  
+
   ],
   providers: [CVComponent,{
     provide: MatDialogRef,

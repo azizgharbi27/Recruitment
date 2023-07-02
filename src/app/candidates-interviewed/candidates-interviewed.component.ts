@@ -27,7 +27,6 @@ export class CandidatesInterviewedComponent {
    ngOnInit(): void {
      this.candidateService.getAll("booked",window.localStorage.getItem("user")!)
      .subscribe(data =>{this.Candidates=data});
-     console.log();
     
      
      document.getElementById("state2")!.style.display="block";

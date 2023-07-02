@@ -18,6 +18,9 @@ export class CandidatesService {
     
     return this.HttpClient.delete(this.url+"/"+id);
    }
+   public getall():Observable<Candidate[]>{
+    return this.HttpClient.get<Candidate[]>(this.url+"");
+   }
    public getAll(status:string,manager:string):Observable<Candidate[]>{
     return this.HttpClient.get<Candidate[]>(this.url+"/"+status+"/"+manager);
    }
@@ -27,8 +30,6 @@ export class CandidatesService {
    public add(c:Candidate){
     return this.HttpClient.post(this.url+"",c);
    } 
-
-   
    public putC(c:Candidate,status:string){
     return this.HttpClient.put(this.url+"/"+status+"/"+window.localStorage.getItem("user"),c);
    }

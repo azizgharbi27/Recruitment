@@ -24,6 +24,7 @@ import { CandidatesRecruitedComponent } from './candidates-recruited/candidates-
 import { CandidatesInterviewedComponent } from './candidates-interviewed/candidates-interviewed.component';
 import { HRBookingComponent } from './hrbooking/hrbooking.component';
 import { HrBookingFinalInterviewComponent } from './hr-booking-final-interview/hr-booking-final-interview.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 
@@ -52,7 +53,8 @@ const routes: Routes = [
   { path: 'CRec', component:CandidatesRecruitedComponent},
   { path: 'CI', component:CandidatesInterviewedComponent},
   { path: 'HRB', component:HRBookingComponent},
-  { path: 'HRFB', component:HrBookingFinalInterviewComponent}
+  { path: 'HRFB', component:HrBookingFinalInterviewComponent},
+  { path: 'stat', component:StatisticsComponent}
   
 ];
 

@@ -12,19 +12,25 @@ label,input,select{
 	border-radius: 5px;
 	padding : 5px;
 	margin: 2px;
+	font-weight: 500;
 }
 .filter {
 	position: relative;
-	height: 10vh;
+	height: 15vh;
 	top: 200px;
 	display: inline-flex;
-	color: #191834;
+	color: #413d83;
+
+	background-color: #ffffff;
+border-radius: 10px;
+ 
 
 	
 	
 }
 #a{
 	padding: 5x;
+	margin: 5px;
 }
 
 
@@ -58,8 +64,7 @@ thead {
 tbody {
 	tr {
 		&:hover {
-			background-color: rgba(255,255,255,0.5);
-		}
+			background-color: rgba(149, 71, 209, 0.221);		}
 	}
 	td {
 		position: relative;
@@ -71,7 +76,7 @@ tbody {
 				right: 0;
 				top: -9999px;
 				bottom: -9999px;
-				background-color: rgba(255, 255, 255, 0.926);
+				background-color: rgba(149, 71, 209, 0.66);
 				z-index: -1;
 			}
 		}
@@ -80,20 +85,21 @@ tbody {
 
 button{
     background: #fff;
-	font-size: 10px;
+	font-size: 12px;
 	margin-top: 30px;
-	padding: 10px 16px;
+	padding: 9px 0px;
 	border-radius: 26px;
 	border: 1px solid #D4D3E8;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: block;
 	align-items: center;
-	width: 100%;
+	width: 120px;
 	color: #4C489D;
 	box-shadow: 0px 2px 2px #5C5696;
 	cursor: pointer;
 	transition: .2s;
+	
 }
 #viewer{
     position: absolute;
@@ -103,9 +109,17 @@ button{
     right: 0px;
 	
 }
-
+#menu{
+	border-radius: 15px;
+	width: 130px;
+	height: 400px;
+	background: #eb0606;
+}
 #search{
 	position: absolute;
 	display: block;
 	width: fit-content;
+	width: 80px;
+	margin-top: 65px;
+	margin-left: 5px;
 }

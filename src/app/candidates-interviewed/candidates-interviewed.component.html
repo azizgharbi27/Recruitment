@@ -26,9 +26,14 @@
 				<td>{{c.field}}</td>
 				<td>{{c.status}}</td>
 				<td id="a">
+					<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+						<mat-icon>more_vert</mat-icon>
+					  </button>
+					  <mat-menu #menu="matMenu" class="actions" id="menu">
                     <button (click)="recruit(c)">Recruit</button> 
                     <button (click)="reject(c)">Reject</button>
                     <button (click)="openDialog(c)">Give Feedback</button>
+					  </mat-menu>
                 </td>
 			
 			</tr>

@@ -1,0 +1,34 @@
+<div class="container">
+<div class="chart-wrapper"  >
+  <label for="">Candidates accepted by Manager</label> 
+    <canvas baseChart
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [type]="barChartType"
+    [options]="barChartOptions"
+    >
+  </canvas>
+</div>
+
+<div class="chart-wrapper">
+    <label for="">Candidates accepted by Field</label> 
+  <canvas baseChart 
+    
+    [datasets]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [type]="doughnutChartType"
+    [options]="doughnutChartOptions">
+  </canvas>
+</div>
+
+<div class="chart-wrapper">
+  <label for="">Candidates</label> 
+<canvas baseChart 
+  
+  [datasets]="pieChartData"
+  [labels]="pieChartLabels"
+  [type]="pieChartType"
+  [options]="pieChartOptions">
+</canvas>
+</div>
+</div>

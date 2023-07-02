@@ -67,8 +67,8 @@ openDialog(c:Candidate): void {
     this.mail.emailc=c.email;
     this.mail.name="interview";
     console.log(this.mail);
-    this.emailService.sNormalEmail(this.mail).subscribe(data => console.log(data));
-    this.candidateService.state(c,"waiting for HR decision").subscribe();
+    this.emailService.sEmail(this.mail,this.date).subscribe(data => console.log(data));
+    this.candidateService.state(c,"recruited").subscribe();
     window.location.reload();
   });
  

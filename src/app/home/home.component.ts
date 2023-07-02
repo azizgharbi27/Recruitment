@@ -68,12 +68,14 @@ else{
 
 
 public onSubmit(){
- // console.log(this.hrs[1].name);
-  if(document.getElementById("state")!.style.display=="block" || document.getElementById("state1")!.style.display=="block" || document.getElementById("state2")!.style.display=="block"){
-    alert("PLEASE LOG OUT FIRST");
+  console.log(this.hrs[1].name);
+ 
+  
+  if(this.user == undefined || this.password == undefined || this.user == "" || this.password == ""){
+    alert("Missing fields");
   }
   else{
-    if(this.user=="admin" && this.password=="admin"){
+    if(this.user=="admin" && this.password=="admin123!"){
       window.localStorage.setItem("user",this.user);
       console.log(window.localStorage.getItem("user"));
       window.location.assign('/AdHomeC');
@@ -91,11 +93,13 @@ public onSubmit(){
          window.location.assign('/HomeHRC');
     }
     for(let i=0;i<this.hrs.length ;i++){
+      console.log(this.hrs);
      if((this.managers[i].name==this.user)&&(this.managers[i].password==this.password)){           
       k++;
       
       window.localStorage.setItem("user",this.user);
       console.log(window.localStorage.getItem("user"));
+      
       window.location.assign('/HomeManC');
      }
    }
